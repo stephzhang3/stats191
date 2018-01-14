@@ -1,0 +1,20 @@
+---
+title: "Assignment 1"
+author: "Stephanie"
+date: "January 13, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r part 1}
+news_data = read.table("NewspapersData2.txt")
+plot(news_data, xlab="Daily Circulation", ylab="Sunday Circulation", pch=19)
+abline(lm(news_data$V1~news_data$V2), col="red")
+lm <- lm(news_data$V1~news_data$V2)
+```
+
